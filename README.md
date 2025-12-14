@@ -1,17 +1,44 @@
 ![CHIPYARD](https://github.com/ucb-bar/chipyard/raw/main/docs/_static/images/chipyard-logo-full.png)
 # Hacked Version
 ## Set up:
-- install gcc, g++ and cmake before this 
+- install gcc, g++ and cmake and other tools before this 
+
+```
+sudo apt update
+sudo apt install -y \
+    build-essential \
+    ninja-build \
+    gcc \
+    g++ \
+    cmake \
+    verilator
+```
+
+
+
 - install conda and activate it in using chipyard
+```
+ conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
+    conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
+```
+
 -  run 
 
 ```
-./scripts/init-submodules-no-riscv-tools.sh
+cd scripts
+bash init-submodules-no-riscv-tools.sh
 ```
-- then, build firtoo;l by 
+- then, build firtool by 
 
 ```
-./scripts/build-circt-from-source.sh -- prefix <your circt path>
+bash build-circt-from-source.sh -- prefix <your circt path>
+```
+
+- next, setup other things
+
+```
+cd ../
+source env.sh
 ```
 
 - finally, add the firtool at [your circt path]/bin to system path
