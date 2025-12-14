@@ -48,7 +48,7 @@
 	url = https://github.com/ucb-bar/rocc-acc-utils.git
 [submodule "generators/rocket-chip"]
 	path = generators/rocket-chip
-	url = https://github.com/chipsalliance/rocket-chip.git
+	url = https://github.com/TONYSKYZENG/rocket-chip.git
 [submodule "generators/rocket-chip-blocks"]
 	path = generators/rocket-chip-blocks
 	url = https://github.com/chipsalliance/rocket-chip-blocks.git
@@ -60,7 +60,7 @@
 	url = https://github.com/ucb-bar/shuttle.git
 [submodule "generators/testchipip"]
 	path = generators/testchipip
-	url = https://github.com/ucb-bar/testchipip.git
+	url = https://github.com/TONYSKYZENG/testchipip.git
 [submodule "sims/firesim"]
 	path = sims/firesim
 	url = https://github.com/firesim/firesim.git
