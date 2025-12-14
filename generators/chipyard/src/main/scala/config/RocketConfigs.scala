@@ -11,7 +11,9 @@ import freechips.rocketchip.subsystem.{InCluster}
 class RocketConfig extends Config(
   new freechips.rocketchip.rocket.WithNHugeCores(1) ++         // single rocket-core
   new chipyard.config.AbstractConfig)
-
+class RocketFPGAConfig extends Config(
+  new freechips.rocketchip.rocket.WithNHugeMCUCores(1) ++         // single rocket-core
+  new chipyard.config.FPGAFriendlyConfig)
 class DualRocketConfig extends Config(
   new freechips.rocketchip.rocket.WithNHugeCores(2) ++
   new chipyard.config.AbstractConfig)
