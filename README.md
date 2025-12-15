@@ -38,10 +38,42 @@ bash build-circt-from-source.sh -- prefix <your circt path>
 
 ```
 cd ../
+./build-setup.sh  -s 2 -s 3 -s 5 -s 6 -s 8 -s 9 -s 9 -s 10
 source env.sh
 ```
 
 - finally, add the firtool at [your circt path]/bin to system path
+
+
+## what is inside this hacked verison
+### Overview
+Curretly, only consider generating ip for vivado, the generated path is 
+```
+sims/verilator/generated-src/chipyard.harness.TestHarness.[xxxConfig]/gen-collateral/
+```
+We can copy these files, apply a top wrapper to DigitalTop.sv, then it can be packed as vivado ip.
+
+### Boot
+The bootrom.S is hacked, and it will force cpu to jump into AXI4's 0x80000000, so you can connect your own device at that place for booting 
+
+
+### Examples
+Please go to wrappers
+### How to generate the verilog
+
+
+First, run 
+
+```
+cd sims/verilator
+```
+- A rocket-based RV64 MCU with axi4 but without mmu to control devices
+
+```
+make CONFIG=RocketFPGAConfig verilog
+```
+
+
 
 # Chipyard Framework [![Test](https://github.com/ucb-bar/chipyard/actions/workflows/chipyard-run-tests.yml/badge.svg)](https://github.com/ucb-bar/chipyard/actions)
 

@@ -1,0 +1,16 @@
+./ClockSourceAtFreqMHz.v
+./EICG_wrapper.v
+./GenericDigitalInIOCell.v
+./GenericDigitalOutIOCell.v
+./SimDRAM.cc
+./SimDRAM.v
+./SimUART.cc
+./SimUART.v
+./TestchipSimDTM.cc
+./TestchipSimDTM.v
+./mm.cc
+./mm_dramsim2.cc
+./plusarg_reader.v
+./testchip_dtm.cc
+./testchip_htif.cc
+./uart.cc
